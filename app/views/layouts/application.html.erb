@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Isla</title>
+<meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- si no se coloca esta meta no funciona para portables-->
+  <title>Ilhabella</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+<%= render 'layouts/nav' %>
+<% flash.each do |name, msg|%>
+		<%= content_tag :div, msg, class: "alert alert-info" %>
+	<% end %>
+<div class="container">
+	
 <%= yield %>
+
+</div>
+
+
 
 </body>
 </html>
