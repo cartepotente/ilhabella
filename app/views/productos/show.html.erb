@@ -15,5 +15,6 @@
   <%= @producto.precio %>
 </p>
 
-<%= link_to 'Edit', edit_producto_path(@producto) %> |
+<%= link_to 'Editar', edit_producto_path(@producto) %> |
+<%= link_to 'Eliminar', @producto, method: :delete, data: { confirm: 'Are you sure?' } %>|
 <%= link_to 'Back', productos_path %>

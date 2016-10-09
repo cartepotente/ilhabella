@@ -1,31 +1,35 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Productos</h1>
+<h1>Productos</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nombre</th>
-      <th>Descripcion</th>
-      <th>Precio</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="row">
+     <% @productos.each do |producto| %>
+  <div class="col-sm-4">
+      <div class="card card-block">
+    
+      
+      <div class="card-title">
+        <%= producto.nombre%>
+      </div>
+      <div class="card-text">
+        <%= truncate(producto.descripcion, length: 30)%>
+      </div>
+        <%= link_to 'Show', producto %>
+        <%= link_to 'Edit', edit_producto_path(producto) %>
+        
+      
 
-  <tbody>
-    <% @productos.each do |producto| %>
-      <tr>
-        <td><%= producto.nombre %></td>
-        <td><%= producto.descripcion %></td>
-        <td><%= producto.precio %></td>
-        <td><%= link_to 'Show', producto %></td>
-        <td><%= link_to 'Edit', edit_producto_path(producto) %></td>
-        <td><%= link_to 'Destroy', producto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+
+      </div>
+
+
+  </div>
+
     <% end %>
-  </tbody>
-</table>
+
+</div>
+   
 
 <br>
 
-<%= link_to 'New Producto', new_producto_path %>
+<%= link_to 'Nuevo Producto', new_producto_path %>
