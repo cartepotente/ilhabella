@@ -14,7 +14,7 @@ class ProductosController < ApplicationController
 
   # GET /productos/new
   def new
-    @producto = Producto.new
+    @producto = current_user.productos.build
   end
 
   # GET /productos/1/edit
@@ -24,7 +24,7 @@ class ProductosController < ApplicationController
   # POST /productos
   # POST /productos.json
   def create
-    @producto = Producto.new(producto_params)
+    @producto = current_user.productos.build(producto_params)
 
     respond_to do |format|
       if @producto.save
