@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<div class="container">
 <p>
   <strong>Nombre:</strong>
   <%= @producto.nombre %>
@@ -12,9 +12,22 @@
 
 <p>
   <strong>Precio:</strong>
-  <%= @producto.precio %>
+  <%= @producto.precio%>
 </p>
 
+<p>
+  <strong>Categoria:</strong>
+  <%= @producto.category && @producto.category.name %>
+</p>
+<p>
+  <strong>Marca:</strong>
+  <%= @producto.marca.name && @producto.marca.name %>
+</p>
+
+
+<% if current_user == user_session %>
 <%= link_to 'Editar', edit_producto_path(@producto) %> |
-<%= link_to 'Eliminar', @producto, method: :delete, data: { confirm: 'Are you sure?' } %>|
+<%= link_to 'Eliminar', @producto, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>|
 <%= link_to 'Back', productos_path %>
+</div>

@@ -1,3 +1,5 @@
+<div class="container">
+
 <%= simple_form_for(@producto) do |f| %>
   <%= f.error_notification %>
 
@@ -5,9 +7,16 @@
     <%= f.input :nombre %>
     <%= f.input :descripcion %>
     <%= f.input :precio %>
+	<%= f.collection_select :category_id, Category.all,:id,:name,{prompt:"Escoje una Categoria"},{class:"form-control"}  %>
+	<br>
+	<%= f.collection_select :marca_id, Marca.all,:id,:name,{prompt:"Escoje una Marca"},{class:"form-control"}  %>
+  
   </div>
+  
 
+<br>
   <div class="form-actions">
     <%= f.button :submit %>
   </div>
 <% end %>
+</div>

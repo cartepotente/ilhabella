@@ -1,19 +1,21 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Productos</h1>
+<div class="container">
+<h1 style="text-align: center;">Productos</h1>
 
 <div class="row">
      <% @productos.each do |producto| %>
   <div class="col-sm-4">
       <div class="card card-block">
     
-      
+      <h3 class="card-header"><%= producto.marca.name && producto.marca.name %></h3>
       <div class="card-title">
         <%= producto.nombre%>
       </div>
       <div class="card-text">
-        <%= truncate(producto.descripcion, length: 30)%>
+        <%= truncate(producto.descripcion, length: 100)%>
       </div>
+
+      <div class="card-footer text-muted"> <%= producto.category && producto.category.name %></div>
         <%= link_to 'Show', producto %>
         <%= link_to 'Edit', edit_producto_path(producto) %>
         
@@ -36,3 +38,4 @@
   <%= link_to 'Nuevo Producto', new_producto_path %>
   
 <% end %>
+</div>
