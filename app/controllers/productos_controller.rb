@@ -5,7 +5,15 @@ class ProductosController < ApplicationController
   # GET /productos
   # GET /productos.json
   def index
-    @productos = Producto.all
+
+    @q = "%#{params[:buscar]}%" #la palabra se buscara en cualquier parte que encaje en el titulo.
+    if @q.present?
+        @productos = Producto.where("nombre LIkE ?",@q) # la consulta se realiza mediante sql el termino LIKE para que tenga relacion sin exacitud
+      else
+      @productos = Producto.all.order("created_at DESC")
+    end
+
+
   end
 
   # GET /productos/1

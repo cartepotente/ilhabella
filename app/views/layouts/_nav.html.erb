@@ -16,16 +16,45 @@
       <%= link_to "Producto", productos_path, class:"nav-link" %>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Pricing</a>
+      <a class="nav-link" href="#">Empresa</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">About</a>
+      <a class="nav-link" href="#">Contactanos</a>
     </li>
   </ul>
-  <form class="form-inline pull-xs-right">
-    <input class="form-control" type="text" placeholder="Search">
-    <button class="btn btn-outline-success" type="submit">Search</button>
-  </form>
+
+
+  <% if user_signed_in? %>
+
+      <ul class="nav navbar-nav nav-item pull-xs-right">
+       
+        <li class="nav-item">
+        <%= link_to "Sign Out", destroy_user_session_path,class:"nav-link" %></li>
+
+        <li class="nav-item">
+        <%= link_to "Cambiar Password",edit_user_password_path,class:"nav-link" %>
+          
+        </li>
+
+
+      </ul>
+
+
+    <% else %>
+
+        <ul class="nav navbar-nav nav-item pull-xs-right">
+       
+        <li class="nav-item">
+        <%= link_to "Registrate", new_user_registration_path,class:"nav-link" %></li>
+        <li class="nav-item">
+        <%= link_to " Sign in", new_user_session_path,class:"nav-link" %>
+          
+        </li>
+
+      </ul>
+
+    <% end %>
+  
   </div><!--Final del contenedor -->
 </nav>
 

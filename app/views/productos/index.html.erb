@@ -1,5 +1,23 @@
 <p id="notice"><%= notice %></p>
+
+
+
+
+
+
 <div class="container">
+
+<%= form_tag productos_path, method: :get do %>
+<div class="input-group">
+  
+  <%= text_field_tag :buscar, params[:buscar], class:'form-control', placeholder:"Buscar Producto..." %>
+  <span class="input-group-btn">
+  <%= submit_tag "Buscar", class:"btn btn-info " %>
+  </span>
+  <% end %>
+  </div>
+<br>
+
 <h1 style="text-align: center;">Productos</h1>
 
 <div class="row">
