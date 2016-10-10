@@ -1,10 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-
-
-
-
-
 <div class="container">
 
 <%= form_tag productos_path, method: :get do %>
@@ -35,9 +30,10 @@
 
       <div class="card-footer text-muted"> <%= producto.category && producto.category.name %></div>
         <%= link_to 'Show', producto %>
+        <%if producto.user == current_user %>
         <%= link_to 'Edit', edit_producto_path(producto) %>
         
-      
+      <% end %>
 
 
       </div>
