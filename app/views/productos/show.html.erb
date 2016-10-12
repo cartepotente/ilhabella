@@ -1,4 +1,4 @@
-
+<br>
 <div class="container">
 
   <div class="row">
@@ -47,7 +47,7 @@
 
 <% if @producto.user == current_user %>
 <%= link_to 'Editar', edit_producto_path(@producto) %> |
-<%= link_to 'Eliminar', @producto, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Eliminar', @producto, method: :delete, data: { confirm: 'Esta seguro' } %>
 <% end %>|
 <%= link_to 'Back', productos_path %>
 
