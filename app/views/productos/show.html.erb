@@ -1,20 +1,35 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
+
+  <div class="row">
+
+  <div class="col-md-6">
+    Imagen
 <p>
   <strong>Nombre:</strong>
   <%= @producto.nombre %>
 </p>
+  </div>
 
-<p>
+  <div class="col-md-6">
+    <p>
   <strong>Descripcion:</strong>
   <%= @producto.descripcion %>
 </p>
+  </div>
+    
+  
 
+  </div>
+<div class="row">
+  <div class="col-md-6">
+
+  <% if user_signed_in? %>
 <p>
   <strong>Precio:</strong>
   <%= @producto.precio%>
 </p>
-
+<% end %>
 <p>
   <strong>Categoria:</strong>
   <%= @producto.category && @producto.category.name %>
@@ -23,6 +38,11 @@
   <strong>Marca:</strong>
   <%= @producto.marca.name && @producto.marca.name %>
 </p>
+    
+
+  </div>
+
+</div>
 
 
 <% if @producto.user == current_user %>
@@ -30,4 +50,6 @@
 <%= link_to 'Eliminar', @producto, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>|
 <%= link_to 'Back', productos_path %>
+
 </div>
+

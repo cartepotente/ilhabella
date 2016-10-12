@@ -15,7 +15,18 @@
  */
 @import "bootstrap";
 
-#footer{
-	
+
+
+
+footer{
+
 	background-color: #606161;
+	padding: 15px;
+	
+	position: relative;
+    bottom: 0;
+    width: 100%;
+    
+    text-align: center;
+
 }
