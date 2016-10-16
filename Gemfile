@@ -21,6 +21,7 @@ gem 'bootstrap', '~> 4.0.0.alpha4'
 gem 'jquery-turbolinks'#turbolink jquery  //= require jquery.turbolinks
 gem "font-awesome-rails"
 gem 'modernizr-rails'
+gem "paperclip", "~> 5.0.0"
 
 
 # Use jquery as the JavaScript library

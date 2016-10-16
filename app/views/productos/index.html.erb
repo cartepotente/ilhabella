@@ -18,11 +18,19 @@
 <br>
 
 
-<div class="row">
+
+
+<div class="card-deck-wrapper">
+  <div class="card-deck">
+
      <% @productos.each do |producto| %>
-  <div class="col-lg-4">
-      <div class="card card-block">
+
+<div class="col-lg-4">
+  <div class="card">
+
     
+     <%=link_to (image_tag producto.image.url), producto, class:"card-img-top" %>    
+      <div class="card-block">    
       <h3 class="card-header"><%= producto.marca.name && producto.marca.name %></h3>
       <div class="card-title">
         <%= producto.nombre%>
@@ -30,24 +38,19 @@
       <div class="card-text">
         <%= truncate(producto.descripcion, length: 100)%>
       </div>
-
       <div class="card-footer text-muted"> <%= producto.category && producto.category.name %></div>
-        <%= link_to 'Show', producto %>
-        <%if producto.user == current_user %>
-        <%= link_to 'Edit', edit_producto_path(producto) %>
         
+        <%if producto.user == current_user %>
+        <%= link_to 'Edit', edit_producto_path(producto) %>        
       <% end %>
-
-
       </div>
-
+</div>
+  </div>
+  <% end %>
+  </div>    
 
   </div>
-
-    <% end %>
-
-</div>
-   
+ 
 
 <br>
 <%if user_signed_in? %>
@@ -58,3 +61,5 @@
 
 </div>
 <br>
+<br><br>
+

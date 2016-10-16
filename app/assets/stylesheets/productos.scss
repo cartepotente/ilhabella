@@ -1,3 +1,17 @@
 // Place all the styles related to the Productos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.card{
+
+-webkit-box-shadow: 2px 2px 5px -1px rgba(43,42,42,1);
+-moz-box-shadow: 2px 2px 5px -1px rgba(43,42,42,1);
+box-shadow: 2px 2px 5px -1px rgba(43,42,42,1);
+
+}
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}

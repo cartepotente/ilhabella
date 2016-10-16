@@ -1,6 +1,9 @@
 class Producto < ActiveRecord::Base
-	before_save :capitalize_nombre
 
+  has_attached_file :image, styles: { medium: "600x480#", small: "350x180#" }
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
+
+	before_save :capitalize_nombre
 	belongs_to :user
 	belongs_to :category
 	belongs_to :marca

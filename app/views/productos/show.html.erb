@@ -5,7 +5,7 @@
   <div class="row">
 
   <div class="col-md-6">
-    Imagen
+    <%= image_tag @producto.image.url(:medium) %>
 <p>
   <strong>Nombre:</strong>
   <%= @producto.nombre %>
@@ -55,3 +55,5 @@
 </div>
 
 </div>
+
+<br><br><br>
