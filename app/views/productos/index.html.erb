@@ -1,5 +1,9 @@
-<br>
+<section class="bg-2" style="text-align: center;">
+     <h1 style="font-size: 60px;">Productos</h1>
 
+    <p style="font-size: 20px">A tu alcance</p>
+</section>
+<br>
 <div class="container">
 
 <%= form_tag productos_path, method: :get do %>
@@ -13,7 +17,6 @@
   </div>
 <br>
 
-<h1 style="text-align: center;">Productos</h1>
 
 <div class="row">
      <% @productos.each do |producto| %>

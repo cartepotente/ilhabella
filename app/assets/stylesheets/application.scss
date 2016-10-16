@@ -19,11 +19,13 @@ html {
   height: 100%;
   box-sizing: border-box;
 }
+/* para que el footer este siempre abajo */
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
+
 
 body{
 	position: relative;
@@ -41,17 +43,25 @@ body{
 }
 
 section {
-    height:500px;
+    height:350px;
     padding-top:50px;
     padding-bottom:50px;
     overflow:auto;
 }
 
 .bg-1 {
-  background:url('1.jpg') no-repeat center center fixed;
+  background:url('5.jpg') no-repeat center center fixed;
     color:#fff;
     background-size:cover;
 }
+.bg-2 {
+  background:url('4.jpg') no-repeat center center fixed;
+    color:#fff;
+    background-size:cover;
+    padding: 100px 5px;
+
+}
+
 
 .footer {
 	color: #EDE3E3;

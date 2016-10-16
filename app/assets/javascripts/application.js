@@ -24,7 +24,7 @@
    $(document).ready(function(){
       $(window).scroll(function() { // check if scroll event happened
         if ($(document).scrollTop() > 150) { // check if user scrolled more than 50 from top of the browser window
-          $(".navbar-fixed-top").css("background-color", "#f8f8f8"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
+          $(".navbar-fixed-top").css("background-color", "#7BFFF6"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
         } else {
           $(".navbar-fixed-top").css("background-color", "transparent"); // if not, change it back to transparent
         }
@@ -73,7 +73,7 @@
 }(jQuery));
 
 $('.bg-1,.bg-3').parallax({
-	speed :	0.4
+	speed :	0.15
 });
 
 $('.bg-2').parallax({
