@@ -13,10 +13,13 @@
 
 <%= render 'layouts/nav' %>
 
+<% if notice %>
+<div class="notices">
 <% flash.each do |name, msg|%>
-	<%= content_tag :div, msg, class: "alert alert-info" %>
+	<%= content_tag :div, msg %>
 <% end %>
-
+</div>
+<% end %>
 	
 <%= yield %>
 

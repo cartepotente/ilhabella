@@ -81,3 +81,15 @@ $('.bg-1,.bg-3').parallax({
 $('.bg-2').parallax({
 	speed :	0.25
 });
+
+/* fade de notice*/
+
+$(document).ready(function(){
+	setTimeout(function(){
+
+		$('.notices').fadeOut("slow", function(){
+			$(this).remove();	
+		})
+	}, 3000)
+
+})

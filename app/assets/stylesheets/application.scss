@@ -32,6 +32,7 @@ body{
   margin: 0;
   padding-bottom: 6rem;
   min-height: 100%;
+  background-color:#E9E9E9;
 }
 
 .navbar {
@@ -91,4 +92,24 @@ section {
 
 .mio{
   padding-top: 80px;
+}
+
+.notices{
+
+  position:absolute;
+  top:55px;
+  width: 100%;
+  z-index: 1500;
+  background-color:#EB0089;
+  padding: 18px;
+  color: #fff;
+  text-align:center;
+}
+
+.card{
+
+-webkit-box-shadow: 2px 2px 5px -1px rgba(43,42,42,1);
+-moz-box-shadow: 2px 2px 5px -1px rgba(43,42,42,1);
+box-shadow: 2px 2px 5px -1px rgba(43,42,42,1);
+
 }
