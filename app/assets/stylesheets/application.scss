@@ -39,9 +39,16 @@ body{
     -moz-transition: all 0.6s ease-out;
     -o-transition: all 0.6s ease-out;
     -ms-transition: all 0.6s ease-out;
-    transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;    
 
 }
+
+
+.navbar-nav>li>a {
+
+     font-size:18px; 
+     color:#31C789;
+      }
 
 section {
     height:350px;
