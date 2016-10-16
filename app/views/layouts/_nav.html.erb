@@ -2,7 +2,7 @@
 
 <nav class="navbar  navbar-fixed-top" >
 <div class="container">
-<%= link_to "Ilhabella", root_path, class:"navbar-brand " %>
+<%= link_to "Ilhabella", root_path, class:"navbar-brand" %>
 <!--Toggle bar -->
 
   <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,13 +19,13 @@
       
     </li>
     <li class="nav-item">
-      <%= link_to "Producto", productos_path, class:"nav-link" %>
-    </li>
-    <li class="nav-item">
       <a class="nav-link" href="#">Empresa</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">Contactanos</a>
+    </li>
+    <li class="nav-item">
+      <%= link_to "Producto", productos_path, class:"nav-link" %>
     </li>
   </ul>
 
@@ -37,10 +37,7 @@
         <li class="nav-item">
         <%= link_to "Sign Out", destroy_user_session_path, method:'delete', class:"nav-link" %></li>
 
-        <li class="nav-item">
-        <%= link_to "Cambiar Password",edit_user_password_path,class:"nav-link" %>
-          
-        </li>
+      
 
 
       </ul>
