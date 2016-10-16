@@ -18,6 +18,9 @@ gem 'hirb'
 gem 'devise'
 gem 'simple_form'
 gem 'bootstrap', '~> 4.0.0.alpha4'
+gem 'jquery-turbolinks'#turbolink jquery  //= require jquery.turbolinks
+gem "font-awesome-rails"
+gem 'modernizr-rails'
 
 
 # Use jquery as the JavaScript library
