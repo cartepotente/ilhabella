@@ -18,17 +18,11 @@
 <br>
 
 
-
-
-<div class="card-deck-wrapper">
-  <div class="card-deck">
-
+<div id="pro">
+  
      <% @productos.each do |producto| %>
 
-<div class="col-lg-4">
-  <div class="card">
-
-    
+  <div class="card">    
      <%=link_to (image_tag producto.image.url), producto, class:"card-img-top" %>    
       <div class="card-block">    
       <h3 class="card-header"><%= producto.marca.name && producto.marca.name %></h3>
@@ -44,13 +38,11 @@
         <%= link_to 'Edit', edit_producto_path(producto) %>        
       <% end %>
       </div>
-</div>
+    </div>
+  <% end %> 
+    
   </div>
-  <% end %>
-  </div>    
-
-  </div>
- 
+     
 
 <br>
 <%if user_signed_in? %>

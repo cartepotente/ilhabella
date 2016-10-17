@@ -3,15 +3,27 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.card{
+#pro{
+	margin: 0 auto;
+	width:100%;
 
--webkit-box-shadow: 2px 2px 5px -1px rgba(43,42,42,1);
--moz-box-shadow: 2px 2px 5px -1px rgba(43,42,42,1);
-box-shadow: 2px 2px 5px -1px rgba(43,42,42,1);
+		.card{
+		margin:10px;
+		width:350px;
+		-webkit-box-shadow: 2px 2px 5px -1px rgba(43,42,42,1);
+		-moz-box-shadow: 2px 2px 5px -1px rgba(43,42,42,1);
+		box-shadow: 2px 2px 5px -1px rgba(43,42,42,1);
+				
+
+				img {
+				  width: 100%;
+				  height: auto;
+				  vertical-align: middle;
+				}
+		}
 
 }
-img {
-  width: 100%;
-  height: auto;
-  vertical-align: middle;
-}
+
+
+
+

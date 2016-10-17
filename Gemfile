@@ -22,6 +22,7 @@ gem 'jquery-turbolinks'#turbolink jquery  //= require jquery.turbolinks
 gem "font-awesome-rails"
 gem 'modernizr-rails'
 gem "paperclip", "~> 5.0.0"
+gem 'masonry-rails'
 
 
 # Use jquery as the JavaScript library
