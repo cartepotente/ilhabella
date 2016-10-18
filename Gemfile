@@ -18,7 +18,7 @@ gem 'hirb'
 gem 'devise'
 gem 'simple_form'
 gem 'bootstrap', '~> 4.0.0.alpha4'
-gem 'jquery-turbolinks'#turbolink jquery  //= require jquery.turbolinks
+gem 'jquery-turbolinks'  #turbolink jquery  //= require jquery.turbolinks
 gem "font-awesome-rails"
 gem 'modernizr-rails'
 gem "paperclip", "~> 5.0.0"
@@ -28,7 +28,7 @@ gem 'masonry-rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.

@@ -35,7 +35,7 @@
       <div class="card-footer text-muted"> <%= producto.category && producto.category.name %></div>
         
         <%if producto.user == current_user %>
-        <%= link_to 'Edit', edit_producto_path(producto) %>        
+        <%= link_to 'Editar', edit_producto_path(producto),class:'btn btn-warning' %>        
       <% end %>
       </div>
     </div>

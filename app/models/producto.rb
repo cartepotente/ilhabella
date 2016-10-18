@@ -7,11 +7,13 @@ class Producto < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :category
 	belongs_to :marca
+	belongs_to :type
 	validates :nombre, presence: true
 	validates :precio, numericality: true
 	validates :descripcion, presence: true
 	validates :category, presence: true
 	validates :marca, presence: true
+	validates :image, presence: true
 
 	
 

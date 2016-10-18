@@ -4,26 +4,25 @@
 
   <div class="row">
 
-  <div class="col-md-6">
+  <div class="col-lg-6">
     <%= image_tag @producto.image.url(:medium) %>
-<p>
-  <strong>Nombre:</strong>
-  <%= @producto.nombre %>
-</p>
+
   </div>
 
-  <div class="col-md-6">
+  <div class="col-lg-6">
+  <h1>  <%= @producto.nombre %> </h1> 
+
     <p>
   <strong>Descripcion:</strong>
   <%= @producto.descripcion %>
 </p>
   </div>
     
-  
-
   </div>
+  <br>
+
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-lg-6">
 
   <% if user_signed_in? %>
 <p>
@@ -35,6 +34,15 @@
   <strong>Categoria:</strong>
   <%= @producto.category && @producto.category.name %>
 </p>
+
+<p>
+  <strong>Sub-Categoria:</strong>
+  <%= @producto.type && @producto.type.name %>
+</p>
+</div>
+
+<div class="col-lg-6">
+
 <p>
   <strong>Marca:</strong>
   <%= @producto.marca.name && @producto.marca.name %>
@@ -45,13 +53,13 @@
 
 </div>
 
-
+<div class="btn-group" role="group" arial-label="Basic example">
 <% if @producto.user == current_user %>
-<%= link_to 'Editar', edit_producto_path(@producto) %> |
-<%= link_to 'Eliminar', @producto, method: :delete, data: { confirm: 'Esta seguro' } %>
-<% end %>|
-<%= link_to 'Back', productos_path %>
-
+<%= link_to 'Editar', edit_producto_path(@producto), class:'btn btn-warning' %> 
+<%= link_to 'Eliminar', @producto, class:'btn btn-danger', method: :delete, data: { confirm: 'Esta seguro' } %>
+<% end %>
+<%= link_to 'Atras', productos_path, class:'btn btn-secondary' %>
+</div>
 </div>
 
 </div>
