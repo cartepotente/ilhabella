@@ -2,13 +2,15 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+
+# coffee scrip del efecto mansory 
 $ ->
 	$('#pro').imagesLoaded ->
 		$('#pro').masonry
 			itemSelector: '.card'
 			isFitWidth: true
 
-
+# jquery de los select dinamicos
 jQuery ->
 	$('#producto_type_id').hide() #esconde la subcategoria
 	categories = $('#producto_type_id').html() #verifica la subcategoria, se puede lanzar un console.log y verificar

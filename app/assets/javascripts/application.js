@@ -74,14 +74,14 @@
 }(jQuery));
 
 $('.bg-1,.bg-3').parallax({
-	speed :	0.15
+	speed :	0.25
 });
 
 $('.bg-2').parallax({
 	speed :	0.25
 });
 
-/* fade de notice*/
+/* fade de notice fancy*/
 
 $(document).ready(function(){
 	setTimeout(function(){
