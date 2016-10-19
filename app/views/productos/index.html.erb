@@ -17,17 +17,18 @@
   </div>
 <br>
 <ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Todos</a>
+<li class="nav-item">
+    <%= link_to "Todos", productos_path, class:"nav-link active " %>
   </li>
+<% @categorydb.each do |p| %>
+
   <li class="nav-item">
-    <a class="nav-link" href="#">Medicos</a>
+       <%= link_to p.name, productos_path(category: p.name), class:"nav-link " %>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Odontologicos</a>
-  </li>
-  
+
+<% end %>
 </ul>
+<br>
 
 <div id="pro" class="transitions-enabled">
   

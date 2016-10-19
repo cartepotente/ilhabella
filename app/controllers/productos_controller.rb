@@ -13,6 +13,15 @@ class ProductosController < ApplicationController
       @productos = Producto.all.order("created_at DESC")
     end
 
+    @categorydb = Category.all.order("created_at DESC")
+    @j = params[:category]
+    if @j.blank?
+      @productos = Producto.all.order("created_at DESC")
+    else
+      @category_id = Category.find_by(name: @j ).id
+      @productos = Producto.where(category_id: @category_id).order("created_at DESC")
+      
+    end
 
   end
 
