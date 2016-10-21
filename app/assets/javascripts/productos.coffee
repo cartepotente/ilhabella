@@ -12,7 +12,7 @@ $ ->
 
 # jquery de los select dinamicos
 jQuery ->
-	$('#producto_type_id').hide() #esconde la subcategoria
+	$('#producto_type_id').hide()# esconde la subcategoria
 	categories = $('#producto_type_id').html() #verifica la subcategoria, se puede lanzar un console.log y verificar
 	$('#producto_category_id').change ->#si la categoria cambia
 		type = $('#producto_category_id :selected').text()#variable que selecciona la categoria en el collect_select
@@ -23,3 +23,13 @@ jQuery ->
 		else
 			$('#producto_type_id').empty()#si no hay subcategorias de esa categoria
 			$('#producto_type_id').hide()#esconde si no hay
+
+$ ->
+  $('.oculto').hide()
+  $('.show-advanced-search').click ->
+    $('.oculto').show() # which removes the hide class
+    $(this).hide()
+
+ 	$('.close-advanced-search').click ->
+    	$('.oculto').hide()
+    	$('.show-advanced-search').show()

@@ -1,0 +1,43 @@
+
+<div class="container">
+
+<div class="col-lg-12">
+
+<%= simple_form_for @huevos , url: productos_path, method: :get do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+  
+    <div class="input-group">
+      
+          <%= f.text_field :nombre, name:'nombre', class:'form-control', placeholder:'Buscar...' %>
+                    <span class="input-group-btn">
+             
+               <%= f.button :submit, 'Buscar', class:'btn btn-primary'%>
+               
+           </span>
+    </div>
+    <br>
+    <h5>
+      <a class="show-advanced-search"> a </a>
+    </h5>
+  <div class="oculto">
+      <%= f.collection_select :category_id, Category.all,:id,:name,{prompt:"Escoje una Categoria"},{class:"form-control"}  %>
+
+
+       <%= f.grouped_collection_select :type_id, Category.order(:name),:types,:name, :id, :name, {prompt:"Escoje una Sub-Categoria"}, {class:"form-control"} %>
+
+      
+      <%= f.collection_select :marca_id, Marca.all,:id,:name,{prompt:"Escoje una Marca"},{class:"form-control"}  %>
+
+      <a class="close-advanced-search fi-x">cerrar</a>
+    </div>
+  </div>
+  
+
+<br>
+  
+<% end %>
+</div>
+</div>
+<br>

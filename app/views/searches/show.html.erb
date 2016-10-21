@@ -1,0 +1,47 @@
+<!--Parallax imagen -->
+<section class="bg-2" style="text-align: center;">
+     <h1 style="font-size: 60px;">Productos</h1>
+
+    <p style="font-size: 20px">A tu alcance</p>
+</section>
+<!--Fin Parallax imagen -->
+<br>
+<div class="container-fluid"><!--Contenedor de toda la pagina -->
+<!--Fin del form de search -->
+<h2 style="text-align: center">Resultado de la Busqueda</h2>
+<% if @search.search_producto.empty? %>
+  <h2>No Existe</h2>
+<% else %>
+<div id="pro" class="transitions-enabled"> <!-- contenedor de los card con mansory -->
+  
+     <% @search.search_producto.each do |producto| %>
+
+  <div class="card">    
+      <div class="card-block">    
+      <h2 class="card-header"><%= producto.marca %></h2>
+      <div class="card-title">
+      <h5><%= link_to producto.nombre, producto, class:'capitalize_nombre'%></h5>        
+      </div>
+      <div class="card-text">
+        <%= truncate(producto.descripcion, length: 100)%>
+      </div>
+      <div class="card-footer text-muted"> <%= producto.category && producto.category.name %></div>
+        
+        <%if producto.user == current_user %>
+        <%= link_to 'Editar', edit_producto_path(producto),class:'btn btn-warning' %>        
+      <% end %>
+      </div>
+    </div>
+  <% end %> 
+    
+  </div><!-- fin del contenedor -->
+    <% end %> 
+
+<br>
+
+  <%= link_to 'Atras', new_search_path, class:"btn btn-primary" %>
+  
+
+</div><!--Fin contenedor-->
+<br>
+<br><br>

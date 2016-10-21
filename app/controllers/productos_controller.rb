@@ -6,24 +6,23 @@ class ProductosController < ApplicationController
   # GET /productos.json
   def index
 
-    @q = "%#{params[:buscar]}%" #la palabra se buscara en cualquier parte que encaje en el titulo.
-    if @q.present?
-        @productos = Producto.where("nombre LIkE ?",@q) # la consulta se realiza mediante sql el termino LIKE para que tenga relacion sin exacitud
-      else
-      @productos = Producto.all.order("created_at DESC")
+
+    @huevos = Producto.new
+   # @categorydb = Category.all.order("created_at DESC")
+
+    @q = "%#{params[:nombre]}%" #la palabra se buscara en cualquier parte que encaje en el titulo.
+    @c = params[:category_id]
+
+    #@productos = Producto.where("nombre ILIKE ?", @q)
+    
+     if @c.present?
+     @productos = Producto.where("category_id = ?", @c)
+
+   else
+      @productos= Producto.all.order(:nombre)
     end
 
-    @categorydb = Category.all.order("created_at DESC")
-    @j = params[:category]
-    if @j.blank?
-      @productos = Producto.all.order("created_at DESC")
-    else
-      @category_id = Category.find_by(name: @j ).id
-      @productos = Producto.where(category_id: @category_id).order("created_at DESC")
-      
-    end
-
-  end
+ end
 
   # GET /productos/1
   # GET /productos/1.json
@@ -46,7 +45,7 @@ class ProductosController < ApplicationController
 
     respond_to do |format|
       if @producto.save
-        format.html { redirect_to @producto, notice: 'Producto creado' }
+        format.html { redirect_to @producto, notice: 'Producto Creado' }
         format.json { render :show, status: :created, location: @producto }
       else
         format.html { render :new }
@@ -60,7 +59,7 @@ class ProductosController < ApplicationController
   def update
     respond_to do |format|
       if @producto.update(producto_params)
-        format.html { redirect_to @producto, notice: 'Producto was successfully updated.' }
+        format.html { redirect_to @producto, notice: 'Producto Actualizado.' }
         format.json { render :show, status: :ok, location: @producto }
       else
         format.html { render :edit }
@@ -74,7 +73,7 @@ class ProductosController < ApplicationController
   def destroy
     @producto.destroy
     respond_to do |format|
-      format.html { redirect_to productos_url, notice: 'Producto was successfully destroyed.' }
+      format.html { redirect_to productos_url, notice: 'Producto Fue Eliminado.' }
       format.json { head :no_content }
     end
   end
@@ -89,4 +88,6 @@ class ProductosController < ApplicationController
     def producto_params
       params.require(:producto).permit(:nombre, :descripcion, :precio,:category_id,:type_id,:marca_id,:image)
     end
+
+   
 end

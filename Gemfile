@@ -23,6 +23,7 @@ gem "font-awesome-rails"
 gem 'modernizr-rails'
 gem "paperclip", "~> 5.0.0"
 gem 'masonry-rails'
+gem 'isotope-rails'
 
 
 # Use jquery as the JavaScript library
