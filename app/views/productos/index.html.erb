@@ -6,6 +6,7 @@
 </section>
 <!--Fin Parallax imagen -->
 <br>
+<div class="container">
 <%= form_tag productos_path, method: :get do %>
   <div class="form-group">
     <%= text_field_tag :nombre, params[:nombre], class: "form-control", placeholder: "Buscar" %>
@@ -15,8 +16,11 @@
   </div>
   <%= submit_tag "Buscar", name: nil, class: "btn btn-primary btn-md" %>
 <% end %>
- 
+ <br>
 <%= link_to "buscar", new_search_path %>
+</div>
+
+<div class="container">
 <div id="pro" class="transitions-enabled"> <!-- contenedor de los card con mansory -->
 
  

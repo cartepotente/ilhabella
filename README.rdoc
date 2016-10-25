@@ -1,28 +1,7 @@
-== README
+== Leeme
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Pequeño sistema de catalgo utilizando select dynamic y filtros especificos.
 
-Things you may want to cover:
+Para instalarlo se necesita hacer bundle y tener postgresql instalado.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+las vistas fueron creadas con boostrap y masonry.js
